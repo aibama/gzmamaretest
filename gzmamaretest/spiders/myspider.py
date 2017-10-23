@@ -56,8 +56,7 @@ class Myspider(scrapy.Spider):
             url_pre = Myspider.url_domin
         #self.log("main page response",level=logging.INFO)
         #self.log(response.text,level=logging.DEBUG)
-        yield item
-
+        
     def parse_content(self,response):
         
         item = TutorialItem()
@@ -70,7 +69,7 @@ class Myspider(scrapy.Spider):
         #有一页评论，就继续添加request,并将此item带给下一个requests
         item['extraInfo'] = response.xpath("//td[@class='t_f']/text()").extract()
         #self.log(item['extraInfo'],level=logging.DEBUG)
-        logger.debug(item['extraInfo'])
+        #logger.debug(item['extraInfo'])
         nxtPageDetect = response.xpath("//a[@class='nxt']/text()").extract()
         mainContentUrl = response.meta['mainContentUrl']
         if '下一页' in nxtPageDetect:
