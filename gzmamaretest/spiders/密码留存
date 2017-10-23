@@ -1,0 +1,69 @@
+dzs520@126.com
+
+911b966278a45e98e74171a28d96d440
+
+
+13414979009  (MD5)=  911b966278a45e98e74171a28d96d440
+6bcbe4e1bef6089ac68c7dfbd01b6a00
+
+md5加密
+import hashlib
+
+
+
+https://passport.mama.cn/index/login/
+
+https://passport.mama.cn/index/login/
+
+Refer:
+https://passport.mama.cn/?key=gz&service=http%253A%252F%252Fwww.gzmama.com%252Fportal.php%253Fget%253D1508032783&time=1508032783&sign=c658f27a0a91a4aab44489583a518462
+
+http://www.gzmama.com/portal.php?get=1508052303&code=8f17d256f02b4ffd4a6a574254924646
+
+
+
+-------------------------------------------------
+https://passport.mama.cn/ssoapi/getCode/?key=gz&service=http%253A%252F%252Fwww.gzmama.com%252Fportal.php%253Fget%253D1508291103&time=1508291103&sign=5429ef92b549a4a34add81ff05d0289d&callback=jQuery1830801900133577085_1508291284517&_=1508291284888
+
+key:gz
+service:http%3A%2F%2Fwww.gzmama.com%2Fportal.php%3Fget%3D1508291103
+time:1508291103
+sign:5429ef92b549a4a34add81ff05d0289d
+callback:jQuery1830801900133577085_1508291284517
+_:1508291284888
+
+-*  _怎么理解；sign;  -*-
+
+jQuery1830801900133577085_1508291284517({"code":"e859610abf5f12580a58b6fc10eee238"});
+-------------------------------------------------
+
+-------------------------------------------------
+http://www.gzmama.com/passport.php?callback=checkcallback&httpcode=200&code=e859610abf5f12580a58b6fc10eee238&i=518226&_=1508291285000
+noresponse
+-*- &i=518226 怎么出来	-*-
+-------------------------------------------------
+
+http://www.gzmama.com/passport.php?mod=userinfo&callback=initUserInfo&i=68298&_=1508291285000
+initUserInfo({"uid":"49318690","username":"dzs520","credits":"1129","newpm":0,"newprompt":"0","conisbind":"0","extcredits1":"958","extcredits2":"1120","extcredits3":"798","pic":"http:\/\/avatar.mama.cn\/049\/31\/86\/90_avatar_small.jpg","portalcp":0,"formhash":null,"needCheckRealName":"0"});
+
+http://www.gzmama.com/passport.php?mod=userinfo&callback=initUserInfo&i=77905&_=1508291284587
+initUserInfo({"uid":"49318690","username":"dzs520","credits":"1129","newpm":0,"newprompt":"0","conisbind":"0","extcredits1":"958","extcredits2":"1120","extcredits3":"798","pic":"http:\/\/avatar.mama.cn\/049\/31\/86\/90_avatar_small.jpg","portalcp":0,"formhash":null,"needCheckRealName":"0"});
+
+
+登录错误
+https://passport.mama.cn/index/login/
+-------------------------------------------------------------------------------------------------
+Content-Type:application/x-www-form-urlencoded; charset=UTF-8
+Cookie:xloginmama_service=http%3A%2F%2Fwww.gzmama.com%2Fportal.php%3Fget%3D1508296561; PPSID=e3e6p38d4l7fr6b43s7h4b6eq0; PHPSESSID=e3e6p38d4l7fr6b43s7h4b6eq0; __guid=192889771.702857853483738400.1508296751960.892; monitor_count=1; MAMADATA60=mama_rp=0&si=1423c304369c15333aad4a559367d52a&ltime=1508296752268&rtime=0&sinfid=0&sinpage=__&location=https%3A%2F%2Fpassport.mama.cn%2F%3Fkey%3Dgz%26service%3Dhttp%25253A%25252F%25252Fwww.gzmama.com%25252Fportal.php%25253Fget%25253D1508296561%26time%3D1508296561%26sign%3Daf8359ce5852f1e733d936ca727d0715; Hm_lvt_f2babe867b10ece0ff53079ad6c04981=1508296752; Hm_lpvt_f2babe867b10ece0ff53079ad6c04981=1508296752; cookie_map=fe750abb5d33a649eafdbf3c6cf39225; mmt_step=true; step=1
+Referer:https://passport.mama.cn/?key=gz&service=http%253A%252F%252Fwww.gzmama.com%252Fportal.php%253Fget%253D1508296561&time=1508296561&sign=af8359ce5852f1e733d936ca727d0715
+X-Requested-With:XMLHttpRequest
+
+
+https://api.geetest.com/reset.php?gt=fb262a75e5ced93e6d937f79b102bd17&challenge=2896497d48c066fda58ef3cd57adb5b7&lang=zh-cn&ww=true&cc=8&callback=geetest_1508297304507
+-------------------------------------------------------------------------------------------------
+gt:fb262a75e5ced93e6d937f79b102bd17
+challenge:2896497d48c066fda58ef3cd57adb5b7
+lang:zh-cn
+ww:true
+cc:8
+callback:geetest_1508297304507
