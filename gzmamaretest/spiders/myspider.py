@@ -30,10 +30,12 @@ class Myspider(scrapy.Spider):
 
     #设置下载延时  
     download_delay = 1
-    #rules = [Rule(LinkExtractor(allow=[r"http://www.gzmama.com/forum.php?mod=forumdisplay&fid=1253&page=?[0-9]*"]),callback='_url_parse',follow=True),]
 
+    '''
+    #start_urls有爬取,但不yeild当页的item
+    #有url的就没有404的情况,即url都是有效的
+    '''
     def parse(self,response):
-        #url_pre = "http://www.gzmama.com/"
         nxtPageDetect = response.xpath("//a[@class='nxt']/text()").extract()
         if '下一页' in nxtPageDetect:
             self.lastpage = self.lastpage+1
@@ -54,11 +56,13 @@ class Myspider(scrapy.Spider):
             logger.debug('the url in main page is %s',url_pre)
             yield Request(url_pre,meta={'mainContentUrl':x,'title':y},callback=self.parse_content)
             url_pre = Myspider.url_domin
-        #self.log("main page response",level=logging.INFO)
-        #self.log(response.text,level=logging.DEBUG)
         
+    '''
+    #帖子的第一页
+    #如果有下一页，则添加评论到item的extraInfo字段
+    #调用parse_content_next()
+    '''
     def parse_content(self,response):
-        
         item = TutorialItem()
         # 应该是url_pre + mainContentUrl = response.url
         self.log(response.url,level=logging.DEBUG)
@@ -82,7 +86,10 @@ class Myspider(scrapy.Spider):
         else:
             yield item
 
-
+    '''
+    #如果有下一页，则添加评论到item的extraInfo字段
+    #所以递归调用本函数
+    '''           
     def parse_content_next(self,response):
         #url_pre = "http://www.gzmama.com/"
         d = response.meta['lastItem']
